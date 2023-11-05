@@ -1,0 +1,354 @@
+/* css reset */
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+html{
+    scroll-behavior:smooth;
+}
+
+
+/* Navigation Bar */
+body {
+    font-family: serif;
+}
+
+nav {
+    background-color: red;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 1;
+    width: 100vw;
+}
+
+nav #logo >img {
+    border: 2px solid black;
+    width: 100px;
+    border-radius: 72px;
+}
+
+nav>.mainMenu {
+    display: flex;
+    list-style: none;
+    
+}
+
+nav .mainMenu li a {
+    display: inline-block;
+    padding: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    font-weight: bolder;
+    font-size: 2.5rem;
+}
+
+nav .mainMenu li a:hover {
+    background-color: rgb(38, 37, 37);
+    border-radius: 20px;
+}
+
+nav .openMenu {
+    font-size: 2rem;
+    margin: 20px;
+    display: none;
+    cursor: pointer;
+}
+
+nav .mainMenu .closeMenu, .icons i {
+    font-size: 2rem;
+    display: none;
+    cursor: pointer;
+}
+
+@media(max-width:800px) {
+    nav .mainMenu {
+        height: 100vh;
+        position: fixed;
+        top: 0; 
+        right: 0;
+        left: 0;
+        z-index: 10;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: url('/image/tastyfood.jpg');
+        transition: top 1s ease;
+        display: none;
+    }
+
+    nav .openMenu {
+        display: block;
+    }
+
+    nav .mainMenu .closeMenu {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    
+
+    nav .mainMenu li a:hover {
+        background: none;
+        color:red;
+        /* font-size: 3.6rem; */
+        font-weight:bolder;
+    }
+
+    .icons i {
+        display: inline-block;
+        padding: 12px;
+    }
+
+    .icons i:hover{
+        font-size: 3rem;
+        color: black;
+    }
+}
+
+
+
+
+/* Home Section */
+
+#home {
+    display: flex;
+    flex-direction: column;
+    padding: 3px 200px;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+#home::before {
+    content: "";
+    background: url('image/food\ order.jpg') no-repeat center/cover;
+    position: absolute;
+    top: 0px;
+    height: 75%;
+    width: 100%;
+    z-index: -1;
+    opacity: 1.6;
+}
+
+#home h1 {
+    color:red;
+    font-family: math;
+    text-align: center;
+}
+
+#home p {
+    color:aliceblue;
+    text-align: center;
+    font-size: 2rem;
+    font-family: cursive;
+}
+
+/* Services Section */
+
+#services-container{
+    padding-top: 120px;
+}
+
+#services {
+    margin: 34px;
+    display: flex;
+}
+
+#services .box {
+    border: 2px solid brown;
+    margin: 3px 6px;
+    padding: 34px;
+    border-radius: 30px;
+    background-color:whitesmoke;
+    box-shadow: 10px 19px 20px -3px orange;
+}
+
+#services .box:hover {
+    background-color: rgb(233, 228, 228);
+}
+
+/* bich me lane ke liye bahut useful hai bhai */
+#services .box img {
+    box-shadow: -2px 28px 25px 10px black;
+    width: 50%;
+    height: 51%;
+    display: block;
+    margin: auto;
+    cursor: pointer;
+    border: 2px solid;
+    border-radius: 8px;
+}
+ 
+#services .box img:hover {
+  border: 2px solid;
+  border-radius: 20px;
+
+  transition: all 1s ease-in;
+} 
+
+#services .box p {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+/* Client Section */
+
+#client-section{
+ padding-top: 75px;
+ height: 407px;
+}
+
+#client-section::before{
+    content: "";
+    position: absolute;
+    background: url('image/bulkfood.jpg');
+    width: 100%;
+    height: 53%;
+    z-index: -1;
+    opacity: 1;
+}
+
+#clients{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.client-item{
+    padding: 40px;
+}
+
+#clients img{
+    height: 139px;
+    width: auto;
+    box-shadow: 4px 8px 11px ;
+}
+
+
+#client-section h1{
+    color:rgb(228, 38, 168);
+    font-weight: bolder;
+    font-style: normal;
+    font-size: 75px;
+    font-family: emoji;
+}
+
+/* #contact-section */
+
+#contact{
+    position: relative;
+    padding-top: 75px;
+    font-size: 3rem;
+}
+#contact::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 1;
+    background: url('image/contact.jpg') no-repeat center center/cover ;
+
+}
+
+#contact >h1{
+    color: blue;
+}
+
+#contact-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 34px;
+}
+
+#contact-box input,#contact-box textarea{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 9px;
+    font-size: 2.3rem;
+}
+
+
+
+#button{
+    border: 4px solid blue;
+    font-family: sans-serif;
+    font-weight: bolder;
+    font-size: xx-large;
+    color: brown;
+    background-color: burlywood;
+    padding: 2px 78px;
+    margin: 18px 168px;
+    border-radius: 17px;
+    cursor: pointer;
+}
+
+#button:hover{
+    background-color:yellow;
+    color:grey;
+}
+
+#btn2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+footer{
+    background: black;
+    color: white;
+    padding: 9px 20px;
+}
+
+/* utility classes */
+
+.h-primary {
+    font-size: 3.8rem;
+    padding: 12px;
+    background-color: rgb(244, 245, 247);
+    color:red;
+    border-radius: 20px;
+    text-shadow: 49px -4px 18px darkred;
+}
+
+.h-secondary {
+    font-size: 2.8rem;
+    padding: 12px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.btn {
+    padding: 6px 20px;
+    border: 2px solid white;
+    background-color: brown;
+    margin: 17px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color:rgb(242, 155, 155);
+    color: azure;
+    font-weight: bolder;
+    margin: 50px;
+    padding: 20px;
+    transition: all 1s ease-in-out;
+}
+
+.center {
+    text-align: center;
+}
+
+
+
+
