@@ -76,7 +76,7 @@ nav .mainMenu .closeMenu, .icons i {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background: url('/image/tastyfood.jpg');
+        background: url('image/tastyfood.jpg');
         transition: top 1s ease;
         display: none;
     }
