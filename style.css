@@ -12,6 +12,7 @@ html{
 
 /* Navigation Bar */
 body {
+    background-color:burlywood;
     font-family: serif;
 }
 
@@ -20,6 +21,7 @@ nav {
     color: white;
     display: flex;
     justify-content: space-between;
+    align-items:center;
     position: fixed;
     z-index: 1;
     width: 100vw;
@@ -120,8 +122,8 @@ nav .mainMenu .closeMenu, .icons i {
 #home {
     display: flex;
     flex-direction: column;
-    padding: 3px 200px;
-    height: 100vh;
+    padding: 90px 200px;
+    height: 775px;
     justify-content: center;
     align-items: center;
 }
